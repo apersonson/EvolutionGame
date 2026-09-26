@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dp6tbinimqn7"]
+
+[ext_resource type="Script" uid="uid://fyqgjtd38t3j" path="res://script/StatBarSee.cs" id="1_brca6"]
+[ext_resource type="Script" uid="uid://c3agaeg4tns54" path="res://script/Stat.cs" id="1_l8xlf"]
+[ext_resource type="Script" uid="uid://c6n6k4i80r3uf" path="res://script/DrawChar.cs" id="3_ta6o5"]
+
+[node name="Node2D" type="Node2D" unique_id=1919245460]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=72642095]
+offset_left = -593.0
+offset_top = -324.0
+offset_right = 600.0
+offset_bottom = 342.0
+color = Color(0.5251013, 0.5251013, 0.5251013, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=753442884]
+offset_left = -580.0
+offset_top = -328.0
+offset_right = -407.0
+offset_bottom = 332.0
+color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=348039041]
+offset_left = -605.0
+offset_top = -329.0
+offset_right = 608.0
+offset_bottom = -230.0
+color = Color(0.3403393, 0.34033933, 0.3403393, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1845204441]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=466321844]
+offset_left = -560.0
+offset_top = -146.0
+offset_right = -430.0
+offset_bottom = 299.0
+
+[node name="muscleLabel" type="Label" parent="VBoxContainer" unique_id=1036011895]
+layout_mode = 2
+text = "muscle(0~10)()"
+script = ExtResource("1_brca6")
+
+[node name="muscle" type="HSlider" parent="VBoxContainer" unique_id=753634436]
+layout_mode = 2
+max_value = 10.0
+script = ExtResource("1_l8xlf")
+
+[node name="activeLabel" type="Label" parent="VBoxContainer" unique_id=1372693459]
+layout_mode = 2
+text = "active(0~10)()"
+script = ExtResource("1_brca6")
+
+[node name="active" type="HSlider" parent="VBoxContainer" unique_id=1073228023]
+layout_mode = 2
+max_value = 10.0
+script = ExtResource("1_l8xlf")
+
+[node name="Label" type="Label" parent="." unique_id=1583492842]
+offset_left = -562.0
+offset_top = -224.0
+offset_right = -421.0
+offset_bottom = -169.0
+text = "creature statistic"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1511114823]
+offset_left = -313.0
+offset_top = -296.0
+offset_right = 313.0
+offset_bottom = -265.0
+placeholder_text = "Creature's name..."
+alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=588209739]
+offset_left = -407.0
+offset_top = -230.0
+offset_right = 576.0
+offset_bottom = 324.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=639948939]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(983, 554)
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="Control" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1158563469]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 983.0
+offset_bottom = 554.0
+script = ExtResource("3_ta6o5")

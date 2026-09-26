@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://disl063y781xj"]
+
+[ext_resource type="Script" uid="uid://b1ensvfmprcl2" path="res://script/Start.cs" id="1_gkp1v"]
+
+[node name="Node2D" type="Node2D" unique_id=1877491887]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1405656056]
+offset_left = -584.0
+offset_top = -331.0
+offset_right = 579.0
+offset_bottom = 329.0
+color = Color(0, 0.86575234, 0.8657522, 1)
+
+[node name="Button" type="Button" parent="." unique_id=580749903]
+offset_left = -147.0
+offset_top = -24.0
+offset_right = 153.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 40
+text = "play"
+script = ExtResource("1_gkp1v")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1498680672]
