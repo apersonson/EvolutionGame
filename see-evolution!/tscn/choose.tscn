@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://fyqgjtd38t3j" path="res://script/StatBarSee.cs" id="1_brca6"]
 [ext_resource type="Script" uid="uid://c3agaeg4tns54" path="res://script/Stat.cs" id="1_l8xlf"]
 [ext_resource type="Script" uid="uid://c6n6k4i80r3uf" path="res://script/DrawChar.cs" id="3_ta6o5"]
+[ext_resource type="Script" uid="uid://caio0fjjcmuxp" path="res://script/SaveStart.cs" id="4_v32lt"]
 
 [node name="Node2D" type="Node2D" unique_id=1919245460]
 
@@ -90,3 +91,12 @@ anchors_preset = 0
 offset_right = 983.0
 offset_bottom = 554.0
 script = ExtResource("3_ta6o5")
+
+[node name="SaveStart" type="Button" parent="." unique_id=1096560683 node_paths=PackedStringArray("drawChar")]
+offset_left = -573.0
+offset_top = 267.0
+offset_right = -410.0
+offset_bottom = 311.0
+text = "Save and start"
+script = ExtResource("4_v32lt")
+drawChar = NodePath("../SubViewportContainer/SubViewport/Control")

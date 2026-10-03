@@ -63,9 +63,12 @@ public partial class DrawChar : Control
 
     public void SaveDrawing()// it doesnt be used yet
     {
+        string filepath = "user://Image/";
+        if(FileAccess.FileExists(filepath))
+        {   
+            Error err = DirAccess.RemoveAbsolute(filepath);   
+        }
         Image img = _viewport.GetTexture().GetImage();
-        img.FlipY();
-        img.SavePng("user://saved_drawing.png");
-        GD.Print("Drawing saved to user://saved_drawing.png");
+        img.SavePng("user://Image/saved_drawing.png");
     }
 }
